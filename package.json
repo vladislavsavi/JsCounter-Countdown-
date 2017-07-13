@@ -12,9 +12,18 @@
     "url": "git+https://gofack@bitbucket.org/frontendknewit/social.git"
   },
   "homepage": "https://bitbucket.org/frontendknewit/social#readme",
-  "description": "",
+  "description": "Simple project that emulates counter",
   "dependencies": {
     "gulp": "^3.9.1",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
     "browser-sync": "^2.18.12",
     "browserify": "^14.4.0",
     "gulp": "^3.9.1",

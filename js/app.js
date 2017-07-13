@@ -1,45 +1,29 @@
 $(document).ready(function(){
-
-	var counterValue = $("#counter").text();
-
-
-	$("#increment").click(function(){
-		var value = $("#counter").text();
-		$("#counter").text(++value);
-	});
-
-	$("#decrement").click(function(){
-		var value = $("#counter").text();
-		$("#counter").text(--value);
-	});
-
-	setInterval(function(){
-		var randomValue = Math.random();
-
-		if(randomValue > 0.5){
-			randomValue = 1;
-		} else {
-			randomValue = 0;
-		}	
-
-
-		switch(randomValue){
-			case 0:
-				$("#counter").text(--counterValue);
-				$("#counter").css('color', 'red');
-				break;
-			case 1:
-				$("#counter").text(++counterValue);
-				$("#counter").css('color', 'green');
-				break;
-		}
-
-		
-	}, 1000);
-
-
-
-
+	var count={
+	 	sec:60,
+	 	min:59,
+	 	hour:23,
+	 	day:3,
+	
+	} 
+	    secer=count.sec;
+		setInterval(function(){
+			$("#counter").text(secer+"-Sec. "+count.min+"-Min. "+count.hour+"-H. "+count.day+"-day");
+			
+			if(secer==0){
+				secer=60;
+				count.min--;
+				
+			}
+			if(count.min==0){
+				count.hour--;
+				count.min=60;
+			}
+			if(count.hour==0){
+				count.day--;
+				count.hour=23;
+			}
+			secer--;
+		}, 1000);
 });
-
 
